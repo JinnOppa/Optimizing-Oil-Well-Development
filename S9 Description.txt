@@ -1,0 +1,56 @@
+Deskripsi Proyek
+Kamu bekerja di perusahaan tambang OilyGiant. Nah, tugasmu adalah mencari tempat terbaik untuk mengembangkan 200 titik sumur minyak baru.
+Untuk menyelesaikan tugas ini, kamu harus melakukan langkah-langkah berikut:
+Baca file dengan parameter yang dikumpulkan dari sumur-sumur minyak di wilayah terpilih: kualitas minyak dan volume cadangannya;
+Buat sebuah model untuk memprediksi volume cadangan di sumur-sumur baru;
+Pilih sumur minyak yang memiliki nilai estimasi tertinggi;
+Pilih wilayah dengan total keuntungan tertinggi dari sumur minyak yang dipilih.
+Kamu punya data sampel minyak dari tiga wilayah. Parameter setiap sumur minyak di wilayah tersebut sudah diketahui. Buat sebuah model yang akan membantumu memilih wilayah dengan margin keuntungan tertinggi. Jangan lupa ya, gunakan teknik bootstrapping untuk menganalisis potensi keuntungan dan risiko.
+Instruksi Proyek
+Unduh dan siapkan datanya. Jelaskan prosedur yang kamu lakukan.
+Latih dan uji model untuk setiap wilayah di 'geo_data_0.csv':
+     2.1. Pisahkan data menjadi training set dan validation set dengan rasio 75:25.
+     2.2. Latih model dan buat prediksi untuk validation set.
+     2.3. Simpan prediksi dan jawaban yang benar untuk validation set.
+     2.4. Tampilkan prediksi volume rata-rata pemesanan dan RMSE dari model.
+     2.5. Analisis hasilnya.
+     2.6. Lakukan dan jalankan langkah 2.1-2.5 untuk file 'geo_data_1.csv' dan 'geo_data_2.csv'.
+Lakukan persiapan untuk menghitung laba:
+     3.1. Simpan semua nilai yang dibutuhkan untuk perhitungan laba pada variabel terpisah.
+     3.2. Dengan investasi 100 juta untuk 200 sumur minyak, sebuah sumur minyak rata-rata harus menghasilkan setidaknya 500 ribu USD untuk menghindari kerugian (ini setara dengan 111,1 unit). Bandingkan jumlah ini dengan jumlah rata-rata pemesanan di setiap wilayah.
+     3.3. Berikan kesimpulan terkait persiapan yang kamu lakukan dalam langkah penghitungan laba.
+Buat sebuah fungsi untuk menghitung laba dari kumpulan sumur minyak terpilih dan prediksi model:
+     4.1. Tuliskan sebuah fungsi untuk menghitung keuntungan dari sekumpulan sumur minyak terpilih dan prediksi modelnya: Pilih 200 sumur dengan nilai prediksi tertinggi dari masing-masing 3 wilayah (file 'csv').
+     4.2. Buat rangkuman tentang target volume pemesanan berdasarkan prediksi ini. Simpan prediksi untuk 200 sumur di masing-masing dari 3 wilayah.
+     4.3. Sampaikan kesimpulanmu: sarankan sebuah wilayah yang cocok untuk pengembangan sumur minyak dan berikan alasan atas pilihanmu. Hitung keuntungan untuk volume pemesanan yang diterima.
+Hitung risiko dan keuntungan untuk setiap wilayah:
+     5.1. Dengan menggunakan prediksi yang kamu simpan pada langkah 4.2, gunakan teknik bootstrapping dengan 1.000 sampel untuk menemukan distribusi profit.
+     5.2. Temukan rata-rata profit, interval kepercayaan 95%, dan risiko kerugian. Kerugian adalah keuntungan negatif, hitung sebagai probabilitas dan kemudian nyatakan sebagai persentase.
+     5.3. Sampaikan kesimpulanmu: sarankan sebuah wilayah yang cocok untuk pengembangan sumur minyak dan berikan alasan atas pilihanmu. Apakah pilihan ini sesuai dengan pilihanmu sebelumnya di poin 4.3?
+Deskripsi Data
+Data eksplorasi geologi untuk ketiga wilayah disimpan dalam beberapa file:
+geo_data_0.csv. unduh dataset
+geo_data_1.csv. unduh dataset
+geo_data_2.csv. unduh dataset
+id — ID unik sumur minyak
+f0, f1, f2 — tiga fitur titik wilayah (makna spesifiknya sebenarnya tidak penting, tetapi fitur itu sendiri sangat penting)
+product — volume cadangan di dalam sumur minyak (1 unit = 1.000 barel).
+Kondisi:
+Hanya regresi linear yang bisa digunakan untuk pelatihan model (sisanya tidak cukup mudah diprediksi).
+Anggaran untuk pengembangan 200 sumur minyak ini adalah 100 juta dolar.
+Satu barel minyak mentah menghasilkan pendapatan sebesar 4,5 dolar. Nah, pendapatan dari satu unit produk adalah $4.500 (volume cadangan ditulis dalam ribuan barel).
+Setelah kamu menganalisis risiko yang ada, pertahankan hanya wilayah yang memiliki risiko kerugian kurang dari 2,5%. Di antara semua yang sesuai dengan kriteria, kamu harus memilih wilayah dengan keuntungan rata-rata tertinggi.
+Oh ya, data ini hanya rekayasa belaka dan tidak mencakup rincian kontrak atau karakteristik sumur apa pun.
+Evaluasi Proyek
+Kami sudah menyusun kriteria pengevaluasian proyek ini. Baca dengan teliti sebelum kamu mengerjakan tugas yang tersedia, ya.
+Nah, ini dia yang diperhatikan project reviewer saat menilai proyekmu:
+Bagaimana kamu mempersiapkan data untuk pelatihan? (apa kamu menskalakan fitur-fiturnya?)
+Sudahkah kamu mengikuti semua langkah yang diperintahkan?
+Sudahkah kamu mempertimbangkan kondisi-kondisi terkait dunia bisnis?
+Apa kesimpulanmu terkait studi tugas ini?
+Sudahkah kamu menerapkan teknik bootstrapping secara tepat?
+Sudahkah kamu menyarankan wilayah terbaik untuk mengembangkan sumur baru? Apakah saran yang kamu berikan memiliki alasan yang kuat?
+Apakah kamu berhasil menghindari duplikasi kode? (apakah kamu berhasil menggunakan fungsi untuk melatih model dan menjalankan prediksi pada file 'geo_data_1.csv' dan 'geo_data_2.csv'? )
+Apakah kamu memertahankan struktur proyek dan menjaga kode tetap rapi?
+Kamu punya semua lembar materi pelajaran dan ringkasan bab yang kamu butuhkan. Oleh karena itu, kami percaya bahwa kamu sudah siap untuk mengerjakan proyek ini.
+Semoga berhasil!
